@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+<style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color:peru;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color:cornflowerblue;
+    color: #fff;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 0.5rem 0;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 0.5rem;
+    border: none;
+    color: #fff;
+    background-color:crimson;
+    cursor: pointer;
+}
+button:hover {
+    background-color:gray;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 0.5rem;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="container">
+    <h1 style="color:blueviolet;">Inventory Management System</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><h1><a href="#productslist">PRODUCTS</h1></a></li>
+                <li><h1><a href="categories.html">CATEGORIES</h1></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome">
+            <marquee behavior="alternate" direction="right" style="color:cadetblue">
+            <h1>Welcome to the Inventory Management System</h1></marquee>
+        </section>
+    </main>
+    <main>
+        <div class="productlist">
+            <h3>PRODUCTS</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Quantity in Stock</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example row, add more rows as needed -->
+                    <tr>
+                        <td>1</td>
+                        <td>Santoor</td>
+                        <td>100</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Lux </td>
+                        <td>200</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Jasmine</td>
+                        <td>250</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Rose </td>
+                        <td>150</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Orange</td>
+                        <td>200</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Apple</td>
+                        <td>300</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+                <div class="productlist">
+                    <h3>CATEGORIES</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Category ID</th>
+                                <th>Category Name</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Example row, add more rows as needed -->
+                            <tr>
+                                <td>1</td>
+                                <td>Cosmotics</td>
+                                <td>
+                                    <button>Edit</button>
+                                    <button>Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Flowers</td>
+                                <td>
+                                    <button>Edit</button>
+                                    <button>Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Fruits</td>
+                                <td>
+                                    <button>Edit</button>
+                                    <button>Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        <div class="add-product">
+            <h2>Add New Product</h2>
+            <form>
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product-name" required>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required>
+                <button type="submit" style="width: 100px; border-radius: 20px;">Submit</button>
+            </form>
+        </div>
+    </header>
+        <section class="add-category">
+            <h2>Add New Category</h2>
+            <form>
+                <label for="category-name">Category Name:</label>
+                <input type="text" id="category-name" name="category-name" required>
+                <button type="submit" style="width: 100px; border-radius: 20px;">Submit</button>
+            </form>
+        </section>
+    </main>
+</div>
+</body>
+</html>
